@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .game-body{
+    display: grid;
+    grid-template-columns: 150px 1fr; 
+  }
+  .choose-weapon{
+    display: grid;
+    grid-template-columns: 150px;
+  }
+  .game-board{
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    justify-items: center;
+  }
+  .footer{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 300px;
+    justify-items: center;
+    align-items: center;
+  }
+  .chooseStatement{
+    justify-self: center;
+  }
+  .weaponChoice{
+    width: 75px;
+    justify-self: center;
+  }
+  .attackButton{
+    width: 75px;
+    justify-self: center;
+  }
+  #attack-choice-displayed{
+    justify-self:center;
+  }
+</style>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+   
+  <div class="game-body">
+    <div class="choose-weapon">
+      <p class="chooseStatement">Choose Weapon</p>
+      <button class="weaponChoice">Rock</button>
+      <button class="weaponChoice">Paper</button>
+      <button class="weaponChoice">Scissors</button>
+    </div>  
+    <div class="game-board">
+      <p>Player pic</p>
+      <p>VS</p>
+      <p>Computer pic</p>
+      <p id="attack-choice-displayed">Player's attack choice: Rock</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button class="attackButton">Attack</button>
+    <p>Lives</p>
+  </div>
+  <script type="text/javascript" src="rpsCode.js">
+    // Your JavaScript goes here!
+  </script>
+</body>
+</html>
