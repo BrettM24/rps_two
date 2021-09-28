@@ -1,6 +1,19 @@
 Rock Paper Scissors:
 
+TOP -> Foundations -> DOM manipulation{
+    1) Remove the logic that plays exactly five rounds
+        Will remove the game function by commenting it out.
+        Will comment out code which calls the game function
+
+    2) Create three buttons, one for each move a player can choose.
+        Event listner which plays round whenever button is clicked.
+        (I am going to keep my original HTML, and will put the event listner on the "attack button")
+        So when one of the option buttons is pressed, it will store that as the player's current move they want to play
+        Then the attack button is pressed and the "current move" stored is used to play the round as the player's move.
+}
+
 HTML and CSS:
+
 
 
 

@@ -14,20 +14,40 @@
     grid-template-columns: 1fr 50px 1fr;
     justify-items: center;
   }
-  .footer{
+  .roundInfo{
     display: grid;
     grid-template-columns: 150px 1fr;
-    grid-template-rows: 300px;
+    grid-template-rows: 100px;
+    justify-items: center;
+    align-items: center;
+  }
+  .roundNumberBody{
+    display: grid;
+    grid-template-columns: 110px 40px;
+    justify-items: center;
+  }
+  .footer{
+    display: grid;
+    grid-template-columns: 150px 1fr 50px 1fr;
+    grid-template-rows: 75px;
     justify-items: center;
     align-items: center;
   }
   .chooseStatement{
     justify-self: center;
   }
-  .weaponChoice{
+  .rockBtn{
     width: 75px;
     justify-self: center;
   }
+  .paperBtn{
+    width: 75px;
+    justify-self: center;
+  }
+  .scissorsBtn{
+    width: 75px;
+    justify-self: center;
+  }  
   .attackButton{
     width: 75px;
     justify-self: center;
@@ -43,27 +63,49 @@
 <body>
   <h1>Rock Paper Scissors</h1>
    
+  <p>First to zero lives loses, choose weapon and press "attack" to play.</p>
+
   <div class="game-body">
     <div class="choose-weapon">
       <p class="chooseStatement">Choose Weapon</p>
-      <button class="weaponChoice">Rock</button>
-      <button class="weaponChoice">Paper</button>
-      <button class="weaponChoice">Scissors</button>
+      <button class="rockBtn" id="Rock">Rock</button>
+      <button class="paperBtn" id="Paper">Paper</button>
+      <button class="scissorsBtn" id="Scissors">Scissors</button>
     </div>  
     <div class="game-board">
       <p>Player pic</p>
-      <p>VS</p>
+      <p></p>
       <p>Computer pic</p>
-      <p id="attack-choice-displayed">Player's attack choice: Rock</p>
+      <div>
+        <p>Player's attack choice:</p>
+        <div id = "attack-choice-displayed-player">Rock</div>
+      </div>
+      <p>VS</p>
+      <div>
+        <p>Computer's attack choice:</p>
+        <div  id = "attack-choice-displayed-computer"></div>
+      </div>
     </div>
+  </div>
+  
+  <div class="roundInfo">
+    <div class = "roundNumberBody">
+      <p>Rounds played : </p>
+      <p id = "roundNumber">0</p>
+    </div>
+    <p id="resultInfo">Result : No round played yet</p>
+    <div></div> <!--Empty div to fill the grid-->
+    <p id = "gameResult"></p>
   </div>
 
   <div class="footer">
-    <button class="attackButton">Attack</button>
+    <button class="attackButton">Attack</button>  
+    <p id="playerLives">5</p>
     <p>Lives</p>
+    <p id="computerLives">5</p>
   </div>
   <script type="text/javascript" src="rpsCode.js">
-    // Your JavaScript goes here!
+    // Your JavaScript goes here
   </script>
 </body>
 </html>
